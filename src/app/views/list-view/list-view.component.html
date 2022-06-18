@@ -1,0 +1,21 @@
+<app-tooltip
+  [showsTooltip]="showsTooltip"
+  [tooltipText]="tooltipText"
+  [topPosition]="topPosition"
+  [leftPosition]="leftPosition"
+  >
+</app-tooltip>
+
+<div class="mx-auto-850px pt-3">
+  <ul class="list-unstyled">
+    <li
+      *ngFor="let reactor of reactors"
+      (mouseover)="reactor.name.length >= 17 ? onHover(reactor.name, $event) : ''"
+      (mouseout)="onMouseout()"
+      >
+      <h2>
+        {{ reactor.name | slice: 0:17 }}<span *ngIf="reactor.name.length >= 17">...</span>
+      </h2>
+    </li>
+  </ul>
+</div>

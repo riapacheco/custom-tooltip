@@ -1,0 +1,12 @@
+:host { -webkit-font-smoothing: antialiased !important; }
+
+ul {
+  width: 280px;
+  max-width: 280px;
+  border: 1px solid #00000030;
+  padding-left: 1rem;
+  li {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
